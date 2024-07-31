@@ -1,0 +1,184 @@
+@font-face {
+  font-family: "MyFont";
+  src: url("../assets/fonts/IranNastaliq.eot") format("eot"), url("../assets/fonts/IranNastaliq.woff") format("woff"), url("../assets/fonts/IranNastaliq.ttf") format("truetype");
+}
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: MyFont;
+}
+
+body, main {
+  max-width: 100vw;
+  width: 100vw;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.top-section {
+  width: 90%;
+  height: 80vh;
+  margin: 5vh auto 5vh;
+  background: linear-gradient(180deg, rgb(247, 209, 217) 0%, rgb(247, 209, 217) 50%, rgb(202, 247, 244) 50%, rgb(202, 247, 244) 100%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 0;
+  padding: 0 3rem;
+}
+
+.wear1 {
+  height: 100%;
+}
+
+h2 {
+  text-align: center;
+  font-size: 8rem;
+  line-height: 1.5;
+  font-weight: 300;
+  color: rgb(211, 55, 231);
+  margin-bottom: 4rem;
+}
+
+header {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  width: 100%;
+  padding: 2rem 5% 0;
+  height: 70px;
+}
+header .logo {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 3rem;
+  font-weight: 400;
+}
+header .logo-pic {
+  width: 90px;
+}
+header .menu1 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+header .menu1 > li {
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 0 2rem;
+}
+header .menu1 > li:hover {
+  color: rgb(229, 60, 252);
+  transition: color 0.3s;
+}
+header .menu1 .assortment {
+  position: relative;
+}
+header .menu1 .assortment > span {
+  transition: transform 0.5s;
+  margin-right: 0.5rem;
+}
+header .menu1 .assortment:hover > span {
+  transform: rotate(180deg);
+}
+header .menu1 .assortment:hover > ul {
+  color: #000;
+  transform: scaleY(1);
+  transform-origin: 50% 0;
+}
+header .menu1 .assortment-menu {
+  position: absolute;
+  top: 95%;
+  left: 1px;
+  width: 100%;
+  background-color: white;
+  text-align: right;
+  padding: 1rem 2rem;
+  line-height: 1.5;
+  transition: transform 0.5s;
+  transform: scaleY(0);
+  transform-origin: 50% 0;
+  border-radius: 10px 10px 0 0;
+  border: 1px solid rgb(229, 60, 252);
+  border-top: 5px solid rgb(229, 60, 252);
+  padding-bottom: 2rem;
+}
+header .menu1 .assortment-menu > li {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  justify-content: space-between;
+  gap: 0;
+}
+header .menu1 .assortment-menu > li > span {
+  padding-top: 1.5rem;
+}
+header .menu1 .assortment-menu > li span:hover, header .menu1 .assortment-menu > li ul > li:hover {
+  color: rgb(229, 60, 252);
+}
+header .assortment-menu > li > div > ul {
+  padding-right: 1rem;
+  display: none;
+}
+header .assortment-menu > li > div > ul > li {
+  font-size: 2rem;
+}
+header .menu2 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+header .menu2 > li {
+  font-size: 1.5rem;
+}
+header .menu2 > li:hover .fa {
+  color: blueviolet;
+  transition: color 0.3s;
+}
+header .menu2 .search {
+  margin: 0 2rem;
+  padding: 0.2rem 0.9rem;
+  border-radius: 50%;
+  background-color: rgba(240, 217, 243, 0.301);
+  cursor: pointer;
+}
+header .menu2 .basket {
+  position: relative;
+}
+header .menu2 .basket span {
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  border-radius: 50%;
+  background-color: rgba(210, 55, 231, 0.925);
+  font-size: 0.8rem;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  color: white;
+}/*# sourceMappingURL=style.css.map */

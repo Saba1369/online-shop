@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="styles/style.css" />
-    <!-- <link rel="stylesheet" href="css/fonts.min.css" /> -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -41,10 +40,38 @@
     </header>
     <!-- ******************************** -->
     <main>
-      <section class="top-section">
-        <img class="wear1" src="assets/2.png" alt="clothes" />
-        <h2>.به فروشگاه تیدا خوش آمدید</h2>
+      <div class="top"><section class="top-section" id="top-sec">
       </section>
+      <div class="change-circle">
+        <span id="circle0" class="material-symbols-outlined" onclick="goThisCircle(0)"></span>
+          <span id="circle1" class="material-symbols-outlined" onclick="goThisCircle(1)"></span>
+            <span id="circle2" class="material-symbols-outlined" onclick="goThisCircle(2)"></span>
+      </div>
+    </div>  
+    
+    <section id="sect2" class="section2">
+      <div id="bags-part" class="before-anim2"><a href="#">خرید</a><h2>کیف</h2></div>
+      <div id="clothes-part" class="before-anim2"><a href="#">خرید</a><h2>پوشاک</h2></div>
+      <div id="belts-part" class="before-anim2"><a href="#">خرید</a><h2>کمربند</h2></div>
+      <div id="abaya-part" class="before-anim2"><a href="#">خرید</a><h2>عبا</h2></div>
+    </section>
+
+    <section id="sect3" class="section3">
+      <h3 class="before-anim3">جدیدترین ها</h3>
+      <div id="new-arrival"></div>
+      <a href="#">مشاهده ی بیشتر</a>
+    </section>
+
+<section id="sect4" class="section4">
+  <p>اعتماد شما سرمایه ی ما، رضایت شما افتخار ما</p>
+  <a class="button" href="#">درباره ی ما</a>
+</section>
+
+<section id="sect5" class="section5">
+  <div class="div51"><p>.اینجا محتوا وارد کنید</p><a class="button" href="#">ادامه مطلب</a></div>
+  <div class="div52"><p>.اینجا محتوا وارد کنید</p><a class="button" href="#">ادامه مطلب</a></div>
+</section>
+
     </main>
     <!-- ******************************** -->
     <script src="JScript.js"></script>

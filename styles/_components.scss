@@ -1,31 +1,3 @@
-.top-section {
-  width: 90%;
-  height: 80vh;
-  margin: 5vh auto 5vh;
-  background: linear-gradient(
-    180deg,
-    rgba(247, 209, 217) 0%,
-    rgb(247, 209, 217) 50%,
-    rgb(202, 247, 244) 50%,
-    rgba(202, 247, 244) 100%
-  );
-  @include flex-display(row, space-evenly, center, 0);
-  padding: 0 3rem;
-}
-
-.wear1 {
-  height: 100%;
-}
-
-h2 {
-  text-align: center;
-  font-size: 8rem;
-  line-height: 1.5;
-  font-weight: 300;
-  color: rgb(211, 55, 231);
-  margin-bottom: 4rem;
-}
-
 header {
   @include flex-display(row-reverse, space-between, center, 0);
   .logo {
@@ -70,6 +42,7 @@ header {
     }
     .assortment-menu {
       position: absolute;
+      z-index: 99;
       top: 95%;
       left: 1px;
       width: 100%;
@@ -89,7 +62,8 @@ header {
         & > span {
           padding-top: 1.5rem;
         }
-        span:hover , ul>li:hover {
+        span:hover,
+        ul > li:hover {
           color: rgb(229, 60, 252);
         }
       }
@@ -135,5 +109,321 @@ header {
         color: white;
       }
     }
+  }
+}
+
+.top-section {
+  width: 100%;
+  min-width: 100%;
+  height: 80vh;
+  // margin: 5vh auto 5vh;
+  background: linear-gradient(
+    180deg,
+    rgba(247, 209, 217) 0%,
+    rgb(247, 209, 217) 50%,
+    rgb(202, 247, 244) 50%,
+    rgba(202, 247, 244) 100%
+  );
+  @include flex-display(row, space-evenly, center, 0);
+  padding: 0 3rem;
+}
+.top {
+  position: relative;
+  h2 {
+    text-align: center;
+    font-size: 8rem;
+    line-height: 1.5;
+    font-weight: 300;
+    margin-bottom: 4rem;
+  }
+}
+.change-circle {
+  position: absolute;
+  top: 92%;
+  left: 93%;
+  & > span {
+    cursor: pointer;
+  }
+}
+
+.wear0,
+.wear2 {
+  height: 100%;
+}
+.wear1 {
+  width: 50%;
+}
+
+.section2 {
+  min-width: 100%;
+  width: 100%;
+  height: 450px;
+  padding-top: 3.5rem;
+  overflow-y: hidden;
+  @include flex-display(row, center, center, 2.5rem);
+  & > div {
+    width: 100%;
+    flex: 1;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    @include flex-display(column, end, center, 5rem);
+    &:hover {
+      > h2,
+      a {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    > h2,
+    a {
+      color: white;
+      font-size: 4rem;
+      text-align: center;
+      opacity: 0;
+    }
+
+    > a {
+      background-color: rgb(207, 40, 230);
+      border-radius: 5px;
+      width: 70%;
+      height: 75px;
+      line-height: 1;
+      transform: translateY(-20px);
+      transition: all 0.5s ease;
+      position: relative;
+      overflow: hidden;
+      &:hover {
+        &::before {
+          transform: translateX(0);
+        }
+      }
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        background-color: rgba(238, 119, 253, 0.842);
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        transform: translateX(-102%);
+        transition: transform 0.5s cubic-bezier(0.32, 2, 0.55, 0.27);
+        z-index: -1;
+      }
+    }
+
+    > h2 {
+      font-weight: 300;
+      background-color: #0000007a;
+      width: 100%;
+      height: 25%;
+      transform: translateY(100%);
+      transition: all 0.5s ease;
+      cursor: pointer;
+      line-height: 1.6;
+    }
+  }
+  #bags-part {
+    background-image: url("../assets/8.png");
+  }
+  #belts-part {
+    background-image: url(../assets/9.png);
+  }
+  #clothes-part {
+    background-image: url(../assets/7.jpg);
+  }
+  #abaya-part {
+    background-image: url(../assets/10.png);
+  }
+}
+
+.anim-class {
+  animation: goUp 0.5s ease-in-out 1;
+}
+
+.section3 {
+  @include flex-display(column, center, center, 3rem);
+  width: 100%;
+  padding: 5rem 2rem;
+  > h3 {
+    font-size: 7rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.5;
+    opacity: 0;
+  }
+  > div {
+    display: grid;
+    grid-template-columns: 265.36px 265.36px 265.36px 265.36px;
+    column-gap: 2rem;
+    row-gap: 3rem;
+    width: 100%;
+    > figure {
+      position: relative;
+      min-width: 100%;
+      transition: box-shadow 0.3s ease-in-out;
+      &:hover {
+        a {
+          text-decoration: underline;
+        }
+        box-shadow: rgba(200, 207, 214, 0.2) 0px 8px 24px;
+        .basket-on-img {
+          transform: scale(1.05);
+        }
+      }
+      border: 1px solid #f8f9fca9;
+      height: 540px;
+      padding-bottom: 1rem;
+      width: 100%;
+      @include flex-display(column, space-between, center, 0);
+      > img {
+        background-color: #f8f9fca9;
+        width: 100%;
+        height: 340px;
+        object-fit: contain;
+        padding: 1rem;
+      }
+      > figcaption {
+        padding-top: 1rem;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 100;
+        > P {
+          display: inline;
+        }
+        > span {
+          font-family: NumberFont;
+        }
+        > i {
+          display: block;
+        }
+      }
+    }
+  }
+  > a {
+    font-size: 2.2rem;
+    border: 1.6px solid rgb(207, 40, 230);
+    color: rgb(207, 40, 230);
+    padding: 0 3rem;
+    border-radius: 5px;
+    position: relative;
+    overflow-y: hidden;
+    &::before {
+      content: "";
+      background-color: rgb(207, 40, 230);
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      position: absolute;
+      top: -100%;
+      left: 0;
+      transition: top 0.5s cubic-bezier(0.32, 2, 0.55, 0.27);
+      z-index: -1;
+    }
+    transition: color 0.5s ease;
+    &:hover {
+      color: white;
+      &::before {
+        top: 0;
+      }
+    }
+  }
+}
+
+.star {
+  color: gold;
+}
+
+.basket-on-img {
+  padding: 10px 9px;
+  text-align: center;
+  color: rgb(212, 212, 212);
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transform: scale(1);
+  transition: transform 0.5s linear;
+  cursor: pointer;
+}
+
+.section4 {
+  margin-bottom: 3rem;
+  width: 100%;
+  height: 90vh;
+  background-image: url("../assets/1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  @include flex-display(column, center, center, 1rem);
+  position: relative;
+  line-height: 1.2;
+  &::after {
+    content: "";
+    background-color: #4f41573d;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  > p {
+    color: white;
+    font-size: 10rem;
+    z-index: 99;
+  }
+  > a {
+    color: white;
+    position: relative;
+    background-color: rgb(207, 40, 230);
+    padding: 0 2rem 0.5rem;
+    font-size: 3rem;
+    z-index: 99;
+    border-radius: 5px;
+    overflow: hidden;
+    &::before {
+      content: "";
+      background-color:rgb(188, 38, 207);;
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      position: absolute;
+      left:0;
+      top: 0;
+      transform: scaleX(0);
+      transform-origin: 0;
+      transition: transform 0.5s cubic-bezier(0.32, 2, 0.55, 0.27);
+      z-index: -1;
+    }
+    transition: color 0.5s ease;
+    &:hover {
+      color: white;
+      &::before {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+.section5{
+  width: 100%;
+  height: 70vh;
+  @include flex-display(row,center,center,2rem);
+&>div{
+   height: 100%; 
+   flex: 1;
+   background-position: center;
+   background-size: cover;
+   @include flex-direction(column,center,center,2rem);
+   font-size: 3rem;
+}
+  .div51{
+    background-image: url("../assets/clothe1.png");  
+  }
+  .div52{
+    background-image: url("../assets/bag2.png");
   }
 }
